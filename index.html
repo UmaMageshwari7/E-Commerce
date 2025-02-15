@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ShopLogo</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><button id="theme-toggle">🌙</button></li>
+        </ul>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="product-container">
+        <div class="product-image">
+            <div class="slider">
+                <img src="images/product1.jpeg" class="active">
+                <img src="images/product2.jpeg">
+                <img src="images/product3.jpeg">
+            </div>
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+            <div class="dots">
+                <span class="dot active" onclick="setImage(0)"></span>
+                <span class="dot" onclick="setImage(1)"></span>
+                <span class="dot" onclick="setImage(2)"></span>
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>Wireless Headphones</h1>
+            <p class="description">Experience immersive sound with top-rated wireless headphones.</p>
+            <p class="price">$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+            <p id="cart-message"></p>
+        </div>
+    </section>
+
+    <!-- Quick View Popup -->
+    <div id="quick-view" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img src="images/product1.jpg" id="popup-img">
+            <h2>Wireless Headphones</h2>
+            <p>High-quality sound, long battery life, and comfortable design.</p>
+            <p class="price">$49.99</p>
+        </div>
+    </div>
+
+    <!-- Customer Reviews -->
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+            <p>"Amazing sound quality, totally worth the price!" - <strong>John D.</strong></p>
+        </div>
+        <div class="review">
+            <p>"Super comfortable, and battery life is great!" - <strong>Emily R.</strong></p>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="product-grid">
+            <div class="product-item" onclick="showQuickView('images/related1.jpg', 'Bluetooth Speaker', '$39.99')">
+                <img src="images/related1.jpeg">
+                <p>Bluetooth Speaker</p>
+            </div>
+            <div class="product-item" onclick="showQuickView('images/related2.jpg', 'Smart Watch', '$59.99')">
+                <img src="images/related2.jpeg">
+                <p>Smart Watch</p>
+            </div>
+            <div class="product-item" onclick="showQuickView('images/related3.jpg', 'Wireless Earbuds', '$29.99')">
+                <img src="images/related3.jpeg">
+                <p>Wireless Earbuds</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
